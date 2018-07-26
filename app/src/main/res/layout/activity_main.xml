@@ -45,17 +45,24 @@
         android:text="@string/button_flash" />
 
     <Button
+        android:id="@+id/btn_sensor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="计步器" />
+
+    <Button
         android:id="@+id/btn_SOS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button_SOS" />
 
     <Button
-        android:id="@+id/btn_sensor"
-        android:layout_width="match_parent"
+        android:id="@+id/btn_story"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="计步器" />
+        android:text="睡前故事" />
 
 
 </LinearLayout>

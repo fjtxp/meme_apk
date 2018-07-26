@@ -18,6 +18,7 @@ import android.widget.EditText;
 import android.util.Log;
 
 
+
 public class MainActivity extends AppCompatActivity {
 
     public final static String EXTRA_MESSAGE = "com.meme.caoyi5.MESSAGE";
@@ -31,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_SOS;
 
     private Button btn_sensor;
+
+    private Button btn_story;
 
 
     @Override
@@ -112,6 +115,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 System.out.println("onClick btn_sensor");
                 Intent intent = new Intent(MainActivity.this, Sensor.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_story=(Button)findViewById(R.id.btn_story);
+        btn_story.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println("onClick btn_story");
+                Intent intent = new Intent(MainActivity.this, TiaoZi.class);
                 startActivity(intent);
             }
         });
