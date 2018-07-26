@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">么么爱心小助手 v1.7</string>
+    <string name="edit_message">请输入暗号....</string>
+    <string name="button_send">发送</string>
+    <string name="button_flash">么么迷魂灯</string>
+    <string name="button_flash_open">么么迷魂灯 -Open-</string>
+    <string name="button_flash_close">么么迷魂灯 -Close-</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_display_message">么么专线 18659259926</string>
+    <string name="button_SOS">在线客服</string>
+</resources>
