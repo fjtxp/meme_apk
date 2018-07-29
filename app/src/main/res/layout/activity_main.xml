@@ -64,6 +64,13 @@
         android:layout_weight="1"
         android:text="睡前故事" />
 
+    <Button
+        android:id="@+id/btn_baidumap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="么么地图" />
+
 
 </LinearLayout>
 

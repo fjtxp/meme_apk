@@ -8,6 +8,7 @@ import android.content.pm.PackageManager;
 import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraManager;
 import android.net.Uri;
+import android.os.Build;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -17,6 +18,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.util.Log;
 
+import java.util.ArrayList;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -34,12 +36,24 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_sensor;
 
     private Button btn_story;
+    private Button btn_baidumap;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        /***caoyi map permission**/
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_SETTINGS)
+                == PackageManager.PERMISSION_GRANTED ) {
+        } else {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.WRITE_SETTINGS}, 1);
+        }
+
+        /****end**/
+
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE)
                 == PackageManager.PERMISSION_GRANTED) {
@@ -56,6 +70,9 @@ public class MainActivity extends AppCompatActivity {
             ActivityCompat.requestPermissions(this,
                     new String[]{Manifest.permission.CAMERA}, 1);//1 can be another integer
         }
+
+
+
 
 
 
@@ -125,6 +142,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 System.out.println("onClick btn_story");
                 Intent intent = new Intent(MainActivity.this, TiaoZi.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_baidumap=(Button)findViewById(R.id.btn_baidumap);
+        btn_baidumap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println("onClick btn_baidumap");
+                Intent intent = new Intent(MainActivity.this, BaiduMap.class);
                 startActivity(intent);
             }
         });
